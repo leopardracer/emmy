@@ -85,7 +85,7 @@ name, _ := rc.GetAttr("Name")
 name.UpdateValue("Andrew")
 
 surname, _ := rc.GetAttr("Surname")
-surnname.UpdateValue("McCain")
+surname.UpdateValue("McCain")
 
 age, _ := rc.GetAttr("Age")
 age.UpdateValue(45)
@@ -263,7 +263,7 @@ $ go test ./...
 
 # Using the emmy CLI tool
 
-Below we provide some isntructions for using the `emmy` CLI tool. You can type `emmy` in the terminal to get a list of available commands and subcommands, and to get additional help.
+Below we provide some instructions for using the `emmy` CLI tool. You can type `emmy` in the terminal to get a list of available commands and subcommands, and to get additional help.
 
 Emmy CLI offers two commands:
 * `emmy server` (with a `start` subcommand, e.g. `emmy server start`) and
@@ -419,7 +419,7 @@ Communication channel between emmy clients and emmy server is secure, as it enfo
 By default, the server will attempt to use the private key and certificate in `test/testdata` directory. The provided certificate is self-signed, and therefore the clients can use it as the CA certificate (e.g. certificate of the entity that issued server's certificate) which they have to provide in order to authenticate the server.
  >**Important note:** You should never use the private key and certificate that comes with this repository when running emmy in production. These are meant *for testing and development purposes only*.
 
-In a real world setting, the client needs to keep a copy of the CA certificate which issued server's certificate. When the server presents its certificate to the client, the client uses CA's certificate to check the validity of server's certifiacate.
+In a real world setting, the client needs to keep a copy of the CA certificate which issued server's certificate. When the server presents its certificate to the client, the client uses CA's certificate to check the validity of server's certificate.
 
 To control keys and certificates used for TLS, emmy CLI programs use several flags. In addition to those already presented in this document, `emmy server` supports the following flags:
 
